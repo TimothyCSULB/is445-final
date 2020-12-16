@@ -29,14 +29,12 @@ const importFile = () => {
         message = "Error: Import file not uploaded";
         return res.send(message);
     };
-    //Read file line by line, inserting records
+
     const buffer = req.file.buffer; 
     const lines = buffer.toString().split(/\r?\n/);
 
     lines.forEach(line => {
-         //console.log(line);
          product = line.split(",");
-         //console.log(product);
          const sql = "INSERT INTO book(book_id, title, total_pages, rating, isbn, published_date) VALUES ($1, $2, $3, $4, $5, $6)";
          return pool.query(sql, product, (err, result) => {
              if (err) {

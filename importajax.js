@@ -14,23 +14,14 @@ const displayResults = (result) => {
         } else {
             var tdCount = "";
             result.result.forEach(book => { 
-
+                tdCount = result.rows[0].count
             });
            //divElement.innerHTML = "Test";
            divElement.innerHTML += `
-           <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Desc</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                ${tdText}
-            </tbody>
-          </table>           
+            <h2> Import Summary<h2>
+            <p>Initial number of books in the database: ${result}<p>
+            <p>Books successfully inserted: ${tdCount}<p>
+            <p>Resulting number of books in the database <b>${result.result}<b><p>
         `
         };
     };
