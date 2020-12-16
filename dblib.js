@@ -27,7 +27,7 @@ const getTotalRecords = () => {
 const importFile = () => {
     if(!req.file || Object.keys(req.file).length === 0) {
         message = "Error: Import file not uploaded";
-        return res.send(message);
+        return message;
     };
 
     const buffer = req.file.buffer; 

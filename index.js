@@ -38,8 +38,8 @@ app.get("/sum", (req, res) => {
     res.render("sum");
 })
 
-app.post("/sum", upload.array(), async (req, res) => {
-    
+app.post("/sum", async (req, res) => {
+    res.render("sum");
 })
 
 app.get("/import", async (req, res) => {
