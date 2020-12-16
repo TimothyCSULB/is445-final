@@ -1,0 +1,34 @@
+<%- include("_header") -%>
+
+<h2> Calculate Sum of a Series</h2>
+
+<form>
+    <table>
+        <tr>
+            <td><label for="startNum">Enter Starting Number</label>:</td>
+            <td><input type="number" name="startNum" id="startNum" required/></td>
+            <td>(required)</td>
+        </tr>
+        <tr>
+            <td><label for="endNum">Enter Ending Number</label>:</td>
+            <td><input type="number" name="endNum" id="endNum" required /></td>
+            <td>(required)</td>
+        </tr>
+        <tr>
+            <td><label for="incrNum">Enter Increment</label>:</td>
+            <td><input type="number" name="incrNum" id="IncrNum" required /></td>
+            <td>(required)</td>
+        </tr>
+        <tr>
+            <td span="2">
+                <input type="submit" value="Calculate Sum" />
+            </td>
+        </tr>
+    </table>
+</form>
+
+<div id="output"></div>
+
+<script src="sumajax.js"></script>
+
+<%- include("_footer") -%>   

@@ -1,0 +1,16 @@
+<%- include("_header") -%>
+
+<h2> Import Books</h2>
+
+<h4>Total number of records in the database: <%= totRecs %></h4>
+
+<p>Select a file with books for Database Insert</p>
+
+<form>
+    <input type="file" name="filename" required><p></p>
+    <input type="submit">
+</form>
+
+<p id="result"></p>
+
+<%- include("_footer") -%>   
